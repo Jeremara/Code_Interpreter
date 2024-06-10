@@ -1,0 +1,76 @@
+# File-Based Code Interpreter
+
+This project is a file-based code interpreter that reads content from various file formats (PDF, XLSX, CSV, DOCX), generates relevant Python code using OpenAI's GPT-3.5 API, executes the generated code, and returns the result to the user.
+
+## Modules
+
+- **file_reader.py**: Contains functions to read content from different file formats.
+- **code_writer.py**: Uses OpenAI's GPT-3.5 API to generate Python code based on the content read from the files and the user's prompt.
+- **code_executor.py**: Executes the generated Python code securely.
+- **app.py**: Integrates the file reader, code writer, and code executor modules and formats the final output for the user.
+
+## Prerequisites
+
+- Python 3.7 or higher
+- OpenAI API key
+
+## Installation
+
+1. **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/your-username/file-based-code-interpreter.git
+    cd file-based-code-interpreter
+    ```
+
+2. **Create and activate a virtual environment:**
+
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. **Install the required packages:**
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. **Set up your OpenAI API key:**
+
+    Replace `'your-openai-api-key'` in `code_writer.py` with your actual OpenAI API key.
+
+    ```python
+    openai.api_key = 'your-openai-api-key'
+    ```
+
+## Usage
+
+1. **Prepare your input file:**
+
+    Ensure you have an input file in one of the supported formats: PDF, XLSX, CSV, or DOCX.
+
+2. **Run the application:**
+
+    Edit the `app.py` file to specify the path to your input file and the user prompt. For example:
+
+    ```python
+    file_path = "demo.pdf"  # Replace with your file path
+    user_prompt = input("Enter request:\n")  # Take user's request:  "Summarize the content of this PDF."
+  
+    ```
+
+    Then, run the application:
+
+    ```sh
+    python app.py
+    ```
+
+3. **View the output:**
+
+    The application will print the generated code and the result of executing the code to the console.
+
+## Example
+
+```sh
+python app.py
