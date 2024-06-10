@@ -19,7 +19,7 @@ This project is a file-based code interpreter that reads content from various fi
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-username/file-based-code-interpreter.git
+    git clone https://github.com/Jeremara/Code_Interpreter.git
     cd file-based-code-interpreter
     ```
 
